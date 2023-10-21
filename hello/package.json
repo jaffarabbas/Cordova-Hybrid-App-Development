@@ -13,11 +13,19 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@appcominteractive/cordova-plugin-hot-reload": "^0.2.4",
     "cordova-android": "^12.0.0"
   },
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "@appcominteractive/cordova-plugin-hot-reload": {},
+      "cordova-plugin-browsersync": {}
+    }
+  },
+  "dependencies": {
+    "cordova-plugin-browsersync": "^1.1.0"
   }
 }
