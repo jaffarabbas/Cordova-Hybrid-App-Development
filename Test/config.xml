@@ -10,16 +10,20 @@
     <allow-intent href="https://*/*" />
     <plugin name="cordova-plugin-camera">
         <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
-        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=" " />
     </plugin>
-    <plugin name="@regulaforensics/cordova-plugin-face-api"/>
-    <plugin name="@regulaforensics/cordova-plugin-face-core"/>
-    <engine name="android" spec="11.0.0" />
+    <plugin name="@regulaforensics/cordova-plugin-face-api" />
+    <plugin name="cordova-plugin-file" />
+    <plugin name="cordova-plugin-android-permissions"/>
     <platform name="android">
         <allow-intent href="market:*" />
         <android versionCode="1" versionName="1.0.0" />
+        <preference name="GradlePluginKotlinEnabled" value="true" />
+        <preference name="GradlePluginKotlinCodeStyle" value="official" />
+        <preference name="GradlePluginKotlinVersion" value="1.8.0" />
         <preference name="android-minSdkVersion" value="23" />
         <preference name="android-maxSdkVersion" value="33" />
+        <preference name="GradleVersion" value="8.1.0" />
+        <preference name="AndroidGradlePluginVersion" value="8.1.0" />
         <preference name="AndroidXEnabled" value="true" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
