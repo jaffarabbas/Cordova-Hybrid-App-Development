@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>FCM Test</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Jaffar
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+     <plugin name="cordova-plugin-firebasex" spec="https://github.com/dpa99c/cordova-plugin-firebase" >
+        <variable name="IOS_STRIP_DEBUG" value="true" />
+         <variable name="ANDROID_FIREBASE_CONFIG_FILEPATH" value="platforms/android/google-services.json" />
+        <variable name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" value="false" />
+        <variable name="FIREBASE_PERFORMANCE_COLLECTION_ENABLED" value="false" />
+        <variable name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" value="false" />
+        <variable name="SETUP_RECAPTCHA_VERIFICATION" value="true" />
+    </plugin>
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <android versionCode="1" versionName="1.0.0" />
+        <preference name="android-minSdkVersion" value="23" />
+        <preference name="android-maxSdkVersion" value="33" />
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/uses-permission" xmlns:android="http://schemas.android.com/apk/res/android">
+               <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+        </edit-config>
+    </platform>
+</widget>
