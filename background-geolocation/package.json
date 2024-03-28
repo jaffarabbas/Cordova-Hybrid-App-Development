@@ -20,16 +20,6 @@
     "platforms": [
       "android"
     ],
-    "plugins": {
-      "cordova-background-geolocation-plugin": {
-        "GOOGLE_PLAY_SERVICES_VERSION": "11+",
-        "ICON": "@mipmap/ic_launcher",
-        "SMALL_ICON": "@mipmap/ic_launcher",
-        "ACCOUNT_NAME": "@string/app_name",
-        "ACCOUNT_LABEL": "@string/app_name",
-        "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
-        "CONTENT_AUTHORITY": "$PACKAGE_NAME"
-      }
-    }
+    "plugins": {}
   }
 }

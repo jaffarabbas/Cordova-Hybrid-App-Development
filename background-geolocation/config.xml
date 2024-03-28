@@ -8,17 +8,17 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-
-     <platform name="android">
+    <platform name="android">
         <allow-intent href="market:*" />
         <android versionCode="1" versionName="1.0.0" />
+        <preference name="androidXEnabled" value="true" />
         <preference name="android-minSdkVersion" value="23" />
         <preference name="android-maxSdkVersion" value="33" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
         </edit-config>
         <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/uses-permission" xmlns:android="http://schemas.android.com/apk/res/android">
-               <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
         </edit-config>
     </platform>
 </widget>
