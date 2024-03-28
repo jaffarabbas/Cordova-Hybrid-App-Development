@@ -27,38 +27,40 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 
+    console.log('test')
 
-    BackgroundGeolocation.configure({
-        locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
-        desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
-        stationaryRadius: 50,
-        distanceFilter: 50,
-        notificationTitle: 'Background tracking',
-        notificationText: 'enabled',
-        debug: true,
-        interval: 10000,
-        fastestInterval: 5000,
-        activitiesInterval: 10000,
-      });
 
-        BackgroundGeolocation.start();
-        BackgroundGeolocation.on('location', function(location) {
-            console.log(location);
-        });
+    // BackgroundGeolocation.configure({
+    //     locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
+    //     desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
+    //     stationaryRadius: 50,
+    //     distanceFilter: 50,
+    //     notificationTitle: 'Background tracking',
+    //     notificationText: 'enabled',
+    //     debug: true,
+    //     interval: 10000,
+    //     fastestInterval: 5000,
+    //     activitiesInterval: 10000,
+    //   });
 
-        BackgroundGeolocation.on('stationary', function(stationaryLocation) {
-            console.log(stationaryLocation);
-        });
+    //     BackgroundGeolocation.start();
+    //     BackgroundGeolocation.on('location', function(location) {
+    //         console.log(location);
+    //     });
 
-        BackgroundGeolocation.startTask(function(taskKey) {
-            console.log(taskKey);
-            BackgroundGeolocation.start();
-            BackgroundGeolocation.on('location', function(location) {
-                console.log(location);
-            });
+    //     BackgroundGeolocation.on('stationary', function(stationaryLocation) {
+    //         console.log(stationaryLocation);
+    //     });
 
-            BackgroundGeolocation.on('stationary', function(stationaryLocation) {
-                console.log(stationaryLocation);
-            });
-        })
+    //     BackgroundGeolocation.startTask(function(taskKey) {
+    //         console.log(taskKey);
+    //         BackgroundGeolocation.start();
+    //         BackgroundGeolocation.on('location', function(location) {
+    //             console.log(location);
+    //         });
+
+    //         BackgroundGeolocation.on('stationary', function(stationaryLocation) {
+    //             console.log(stationaryLocation);
+    //         });
+    //     })
 }
