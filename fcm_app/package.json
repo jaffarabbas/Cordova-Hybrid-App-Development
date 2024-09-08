@@ -17,7 +17,10 @@
       "android"
     ],
     "plugins": {
-      "cordova-plugin-firebasex": {}
+      "cordova-plugin-firebasex": {},
+      "cordova-plugin-firebase-analytics": {
+        "ANDROID_FIREBASE_BOM_VERSION": "30.3.1"
+      }
     }
   },
   "devDependencies": {

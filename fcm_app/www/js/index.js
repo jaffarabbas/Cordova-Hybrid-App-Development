@@ -1,4 +1,5 @@
 document.addEventListener('deviceready', () => {
+    cordova.plugins.firebase.analytics.logEvent("my_event", {param1: "value1"});
     firebaseSetup();
 });
   
